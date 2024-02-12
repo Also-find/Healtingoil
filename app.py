@@ -48,7 +48,52 @@ def result(df):
 st.set_page_config(
     page_title="Prediction Oil Heating", page_icon="🖼️", initial_sidebar_state="collapsed"
 )
-st.markdown("# Prediksi Penggunaan Heating Oil Untuk Kebutuhanmu Dirumah")
+st.markdown(
+    """
+    <style>
+    .appview-container {
+        background: linear-gradient(to top, #ffdebf, #FFF);
+    }
+
+    .background-container {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Adjust height as needed */
+        background: url('https://img.freepik.com/free-vector/oil-industry-flat-banner_98292-6928.jpg?w=996&t=st=1707738259~exp=1707738859~hmac=133a76dc18a875a67a2d5c3d77ff86b717dfaa61b85cc8aa5bb905dc24cbba01');
+        background-size: cover;
+        background-position: center center;
+        color: white;
+        margin-bottom: 20px;
+    }
+    .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    }
+    .content {
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .content h1 {
+    color: white;
+    }
+    </style>
+    <div class="background-container">
+        <div class="layer"></div>
+        <div class="content">
+            <h1>Prediksi Penggunaan Heating Oil Untuk Kebutuhanmu Dirumah</h1>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 ex1, ex2 = st.columns(2)
 data = []
